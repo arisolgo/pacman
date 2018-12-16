@@ -54,7 +54,7 @@ namespace MonoGameME
 		{
 			base.LoadContent();
 
-			// TODO
+			this.board.LoadContent(new SpriteBatch(GraphicsDevice));
 		}
 
 		/// <summary>

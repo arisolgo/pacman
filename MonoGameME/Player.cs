@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoGameME
 {
-	class Player
+	public abstract class Player : Figure
 	{
+		public enum Orientation { Up, Down, Left, Right };
+
+		protected Texture2D texture;
+
+		public Player(InitialState initialState) : base(initialState)
+		{
+			this.orientation = Orientation.Right;
+		}
+
+		public Orientation orientation
+		{
+			get { return orientation; }
+			set { orientation = value; }
+		}
 	}
 }

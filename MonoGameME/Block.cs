@@ -3,9 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoGameME
 {
-	public class Point : Figure
+	public class Block : Figure
 	{
-		public Point(InitialState initialState) : base(initialState)
+		public Block(InitialState initialState) : base(initialState)
 		{
 		}
 

@@ -1,18 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoGameME
 {
-	abstract class Figure
+	public abstract class Figure
 	{
-		int x;
-		int y;
-		int height;
-		int width;
+		protected Rectangle rectangle;
 
-		public abstract void Draw();
+		public Figure(InitialState initialState)
+		{
+			this.rectangle = new Rectangle(initialState.x, initialState.y, 32, 32);
+		}
+
+		public int Width
+		{
+			get { return rectangle.Width; }
+			set { rectangle.Width = value; }
+		}
+		public int Height
+		{
+			get { return rectangle.Height; }
+			set { rectangle.Height = value; }
+		}
+		public int X
+		{
+			get { return rectangle.X; }
+			set { rectangle.X = value; }
+		}
+
+		public int Y
+		{
+			get { return rectangle.Y; }
+			set { rectangle.Y = value; }
+		}
+
+		public abstract void LoadContent(SpriteBatch spriteBatch);
+
+		public abstract void Draw(SpriteBatch spriteBatch);
 	}
 }

@@ -69,9 +69,15 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Block.cs" />
+    <Compile Include="Board.cs" />
+    <Compile Include="Figure.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Ghost.cs" />
+    <Compile Include="InitialState.cs" />
     <Compile Include="Pacman.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sprite.cs" />
